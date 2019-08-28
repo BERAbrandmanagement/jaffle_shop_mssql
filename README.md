@@ -3,7 +3,9 @@ image with mssql drivers at https://cloud.docker.com/u/beradev/repository/docker
 
 ```shell
 
-$ docker run --rm -it -v $PWD:/dbt -v ${PROFILES_DIR}/profiles.yml:/home/dbt/.dbt/profiles.yml beradev/dbt:0.14.0-mssql debug
+$ docker run --rm -it -v $PWD:/dbt -v ${HOME}/.dbt/profiles.yml:/home/dbt/.dbt/profiles.yml beradev/dbt:0.14.0-mssql debug
+
+$ docker run --rm -it -p 8080:8080  -v $PWD:/dbt -v ${HOME}/.dbt/profiles.yml:/home/dbt/.dbt/profiles.yml beradev/dbt:0.14.0-mssql docs serve
 
 ```
 
