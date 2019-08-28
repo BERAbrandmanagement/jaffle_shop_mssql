@@ -1,3 +1,13 @@
+## docker 
+image with mssql drivers at https://cloud.docker.com/u/beradev/repository/docker/beradev/dbt
+
+```shell
+
+$ docker run --rm -it -v $PWD:/dbt -v ${PROFILES_DIR}/profiles.yml:/home/dbt/.dbt/profiles.yml beradev/dbt:0.14.0-mssql debug
+
+```
+
+
 ## dbt models for `jaffle_shop`
 
 `jaffle_shop` is a fictional ecommerce store. This dbt project transforms raw
